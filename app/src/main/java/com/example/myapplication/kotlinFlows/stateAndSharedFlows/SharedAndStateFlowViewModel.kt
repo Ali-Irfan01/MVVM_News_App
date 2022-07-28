@@ -30,7 +30,7 @@ class SharedAndStateFlowViewModel:ViewModel() {
     }
 
 
-    private val _sharedFlow = MutableSharedFlow<Int>(replay = 5)
+    private val _sharedFlow = MutableSharedFlow<Int>()
     val sharedFlow = _sharedFlow.asSharedFlow()
 
 

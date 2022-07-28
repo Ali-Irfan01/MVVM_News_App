@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModelVariable"
+            type="com.example.myapplication.dataBinding.viewModelAndLiveData.ViewModelVariable" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".dataBinding.viewModelAndLiveData.VariableBindingMainActivity">
+
+        <TextView
+            android:id="@+id/txtVariableBinding"
+            android:layout_width="202dp"
+            android:layout_height="118dp"
+            android:hint="@string/i_am_sample_text"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="@{viewModelVariable.message}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.246"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/edtVariableBinding"
+            android:layout_width="247dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/enter_sample_live_data_text"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.446"
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

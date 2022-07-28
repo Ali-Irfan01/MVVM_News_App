@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="first_name">First name</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="country">Country</string>
+    <string name="apply">Apply</string>
+    <string name="last_name">Last Name</string>
+    <string name="button">Button</string>
+    <string name="first_name1">First name</string>
+    <string name="last_name1">Last Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="country1">Country</string>
+    <string name="first_number">First Number</string>
+    <string name="second_number">Second Number</string>
+    <string name="result">Result</string>
+    <string name="textview">TextView</string>
+    <string name="add">Add</string>
+    <string name="todo">TODO</string>
+    <string name="add_image">Add Image</string>
+    <string name="please_select_your_burger_meat_type_and_add_ons">Please Select Your Burger, Meat type, and add-ons</string>
+    <string name="chicken">Chicken</string>
+    <string name="beef">Beef</string>
+    <string name="mutton">Mutton</string>
+    <string name="cheese">Cheese</string>
+    <string name="onions">Onions</string>
+    <string name="salad">Salad</string>
+    <string name="order">Order</string>
+    <string name="order_placed_successfully">Order Placed Successfully</string>
+    <string name="todo2">TODO</string>
+    <string name="go_back">Go back</string>
+    <string name="request_permission">Request Permission</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="todo3">TODO</string>
+    <string name="dialog_1">Dialog 1</string>
+    <string name="dialog_2">Dialog 2</string>
+    <string name="dialog3">Dialog3</string>
+    <string name="add1">Add</string>
+    <string name="newtodo">NewTodo</string>
+    <string name="title">Title</string>
+    <string name="enter_new_data">Enter new data</string>
+    <string name="fragment_1">Fragment 1</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_fragment">First Fragment</string>
+    <string name="second_fragment" />
+    <string name="second_fragment1">Second Fragment</string>
+    <string name="todo4">TODO</string>
+    <string name="drag_left">Drag Left</string>
+    <string name="drag_right">Drag Right</string>
+    <string name="swipe_right">Swipe Right</string>
+    <string name="swipe_right2">Swipe Right</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="adult">Adult?</string>
+    <string name="load">Load</string>
+    <string name="save">Save</string>
+    <string name="notification">Notification</string>
+    <string name="stop">Stop</string>
+    <string name="service_status">SERVICE STATUS</string>
+    <string name="start">Start</string>
+    <string name="status">Status</string>
+    <string name="swipe_left">Swipe Left</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="first_activity">First Activity</string>
+    <string name="start_activity">Start Activity</string>
+    <string name="add_1">Add +1</string>
+    <string name="_0">0</string>
+    <string name="change_input">Change Input</string>
+    <string name="fruit_name">Fruit name...</string>
+    <string name="display_edittext_content">Display Edittext Content</string>
+    <string name="select_random_fruit_for_edittext">Select Random Fruit for Edittext</string>
+    <string name="sample_text_is_here">Sample Text is Here</string>
+    <string name="todo5">TODO</string>
+    <string name="edit_text_in_text_view">Edit text in text view...</string>
+    <string name="i_am_sample_text">I am sample text</string>
+    <string name="enter_sample_live_data_text">Enter sample Live data text</string>
+    <string name="stateflow_button">StateFlow Button</string>
+</resources>

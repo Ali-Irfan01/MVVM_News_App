@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miItem1"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_unselected"/>
+
+    <item
+        android:id="@+id/miItem2"
+        android:title="Messages"
+        android:icon="@drawable/ic_messages"/>
+
+    <item
+        android:id="@+id/miItem3"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"/>
+
+</menu>

@@ -10,7 +10,7 @@ import com.example.myapplication.R
 
 class TodoAdapter(
     var todos: List<Todo>
-) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>(){
+) :RecyclerView.Adapter<TodoAdapter.TodoViewHolder>(){
 
     inner class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 

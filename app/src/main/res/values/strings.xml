@@ -92,4 +92,19 @@
     <string name="i_am_sample_text">I am sample text</string>
     <string name="enter_sample_live_data_text">Enter sample Live data text</string>
     <string name="stateflow_button">StateFlow Button</string>
+    <string name="addTwo">Add</string>
+    <string name="first_name_two">First Name</string>
+    <string name="last_name_two">Last Name</string>
+    <string name="age_two">Age</string>
+    <string name="_1">1</string>
+    <string name="john">John</string>
+    <string name="doe">Doe</string>
+    <string name="_25">(25)</string>
+    <string name="Update" />
+    <string name="_30">30</string>
+    <string name="last_name_room">Last Name</string>
+    <string name="first_name_room">First name</string>
+    <string name="street_name_room">Street Name</string>
+    <string name="street_number_room">Street Number</string>
+    <string name="search">Search...</string>
 </resources>

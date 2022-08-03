@@ -20,7 +20,7 @@ class BottomNavigationMainActivity : AppCompatActivity() {
         val secondFragment = SecondFragment()
         val thirdFragment = BlankFragment()
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
+        binding.bottomNavigations.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.miHome -> setCurrentFragment(firstFragment)
                 R.id.miMessages -> setCurrentFragment(secondFragment)
@@ -31,7 +31,7 @@ class BottomNavigationMainActivity : AppCompatActivity() {
     }
     private fun setCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flFragment, fragment)
+            replace(R.id.fragmentOne, fragment)
             commit()
         }
 }

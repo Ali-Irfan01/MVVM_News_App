@@ -16,13 +16,13 @@ class FragmentMainActivity : AppCompatActivity() {
         val SecondFragment = SecondFragment()
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flFragment, FirstFragment)
+            replace(R.id.fragmentOne, FirstFragment)
             commit()
         }
 
         binding.btnFragment1.setOnClickListener{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, FirstFragment)
+                replace(R.id.fragmentOne, FirstFragment)
                 addToBackStack(null)
                 commit()
             }
@@ -30,7 +30,7 @@ class FragmentMainActivity : AppCompatActivity() {
 
         binding.btnFragment2.setOnClickListener{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, SecondFragment)
+                replace(R.id.fragmentOne, SecondFragment)
                 addToBackStack(null)
                 commit()
             }

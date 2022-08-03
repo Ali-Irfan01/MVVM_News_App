@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:id="@+id/flFragment"
+        android:id="@+id/fragmentmain"
         android:layout_width="357dp"
         android:layout_height="636dp"
         app:layout_constraintBottom_toBottomOf="parent"

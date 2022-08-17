@@ -3,6 +3,7 @@ package com.example.myapplication.mVVMNewsApp.repository
 import com.example.myapplication.mVVMNewsApp.api.RetrofitInstance
 import com.example.myapplication.mVVMNewsApp.db.ArticleDatabase
 import com.example.myapplication.mVVMNewsApp.models.Article
+import retrofit2.http.Url
 
 class NewsRepository(
     val db: ArticleDatabase
@@ -22,4 +23,6 @@ class NewsRepository(
     fun getSavedNews() = db.getArticleDao().getAllArticles()
 
     suspend fun deleteArticle(article: Article) = db.getArticleDao().deleteArticle(article)
+
+    suspend fun isAvailable(url: String?): Int = db.getArticleDao().isAvailable(url)
 }

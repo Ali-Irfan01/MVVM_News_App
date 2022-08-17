@@ -7,6 +7,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
 import com.example.myapplication.mVVMNewsApp.models.Article
+import retrofit2.http.Url
 
 @Dao
 interface ArticleDao {
@@ -19,4 +20,7 @@ interface ArticleDao {
 
     @Delete
     suspend fun deleteArticle(article: Article)
+
+    @Query("SELECT COUNT() FROM articles WHERE url = :url")
+    suspend fun isAvailable(url: String?): Int
 }

@@ -1,7 +1,6 @@
 package com.example.myapplication.mVVMNewsApp.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentBreakingNewsBinding
-import com.example.myapplication.mVVMNewsApp.ui.viewModel.NewsActivity
-import com.example.myapplication.mVVMNewsApp.adapters.NewsAdpater
+import com.example.myapplication.mVVMNewsApp.NewsActivity
+import com.example.myapplication.mVVMNewsApp.adapters.NewsAdapter
 import com.example.myapplication.mVVMNewsApp.ui.viewModel.NewsViewModel
 import com.example.myapplication.mVVMNewsApp.util.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.myapplication.mVVMNewsApp.util.Resource
@@ -24,7 +23,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
 
     var _binding: FragmentBreakingNewsBinding? = null
     lateinit var viewModel: NewsViewModel
-    lateinit var newsAdapter: NewsAdpater
+    lateinit var newsAdapter: NewsAdapter
 
     val TAG = "BreakingNewsFragment "
 
@@ -124,7 +123,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
     }
 
     private fun setUpRecyclerView() {
-        newsAdapter = NewsAdpater()
+        newsAdapter = NewsAdapter()
         _binding?.rvBreakingNews?.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)

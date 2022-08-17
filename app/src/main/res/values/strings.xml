@@ -107,4 +107,13 @@
     <string name="street_name_room">Street Name</string>
     <string name="street_number_room">Street Number</string>
     <string name="search">Search...</string>
+    <string name="google_maps_key">AIzaSyDiRn10IXb59_wT0KbBf-YC6DYSHfqF04I</string>
+<!--    <string name="app_name">RunningApp</string>-->
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Running Time</item>
+        <item>Distance</item>
+        <item>Average Speed</item>
+        <item>Calories Burned</item>
+    </string-array>
 </resources>

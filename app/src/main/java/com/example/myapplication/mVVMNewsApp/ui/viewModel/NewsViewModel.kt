@@ -1,23 +1,14 @@
 package com.example.myapplication.mVVMNewsApp.ui.viewModel
 
-import android.app.Application
-import android.content.Context
-import android.net.ConnectivityManager
-import android.net.ConnectivityManager.*
-import android.net.NetworkCapabilities.*
-import android.os.Build
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.mVVMNewsApp.NewsApplication
 import com.example.myapplication.mVVMNewsApp.models.Article
 import com.example.myapplication.mVVMNewsApp.models.NewsResponse
 import com.example.myapplication.mVVMNewsApp.repository.NewsRepository
 import com.example.myapplication.mVVMNewsApp.util.Resource
 import kotlinx.coroutines.launch
 import retrofit2.Response
-import java.io.IOException
 
 class NewsViewModel(
     val newsRepository: NewsRepository
@@ -42,8 +33,6 @@ class NewsViewModel(
         val response = newsRepository.getBreakingNews(countryCode, breakingNewsPage)
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
-
-
     private fun handleBreakingNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse> {
         if (response.isSuccessful) {
             response.body()?.let { resultResponse ->
@@ -95,6 +84,11 @@ class NewsViewModel(
 
     fun deleteArticle(article: Article) = viewModelScope.launch {
         newsRepository.deleteArticle(article)
+    }
+
+
+   suspend fun isAvailable(url: String?): Int {
+        return newsRepository.isAvailable(url)
     }
 
 

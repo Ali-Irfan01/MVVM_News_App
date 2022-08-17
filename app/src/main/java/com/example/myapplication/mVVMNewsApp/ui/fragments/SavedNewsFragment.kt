@@ -12,15 +12,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentSavedNewsBinding
-import com.example.myapplication.mVVMNewsApp.ui.viewModel.NewsActivity
-import com.example.myapplication.mVVMNewsApp.adapters.NewsAdpater
+import com.example.myapplication.mVVMNewsApp.NewsActivity
+import com.example.myapplication.mVVMNewsApp.adapters.NewsAdapter
 import com.example.myapplication.mVVMNewsApp.ui.viewModel.NewsViewModel
 import com.google.android.material.snackbar.Snackbar
 
 class SavedNewsFragment: Fragment(R.layout.fragment_saved_news) {
 
     private lateinit var _binding: FragmentSavedNewsBinding
-    private lateinit var newsAdapter: NewsAdpater
+    private lateinit var newsAdapter: NewsAdapter
     lateinit var viewModel: NewsViewModel
 
 // To bind the fragment with the
@@ -90,7 +90,7 @@ class SavedNewsFragment: Fragment(R.layout.fragment_saved_news) {
     }
 
     private fun setUpRecyclerView(){
-        newsAdapter = NewsAdpater()
+        newsAdapter = NewsAdapter()
         _binding?.rvSavedNews?.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)

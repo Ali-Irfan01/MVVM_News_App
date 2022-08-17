@@ -1,7 +1,6 @@
 package com.example.myapplication.mVVMNewsApp.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,8 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentSearchNewsBinding
-import com.example.myapplication.mVVMNewsApp.ui.viewModel.NewsActivity
-import com.example.myapplication.mVVMNewsApp.adapters.NewsAdpater
+import com.example.myapplication.mVVMNewsApp.NewsActivity
+import com.example.myapplication.mVVMNewsApp.adapters.NewsAdapter
 import com.example.myapplication.mVVMNewsApp.ui.viewModel.NewsViewModel
 import com.example.myapplication.mVVMNewsApp.util.Constants
 import com.example.myapplication.mVVMNewsApp.util.Constants.Companion.SEARCH_NEWS_TIME_DELAY
@@ -30,7 +29,7 @@ class SearchNewsFragment: Fragment(R.layout.fragment_search_news) {
 
     var _binding: FragmentSearchNewsBinding? = null
     lateinit var viewModel: NewsViewModel
-    lateinit var newsAdapter: NewsAdpater
+    lateinit var newsAdapter: NewsAdapter
     val TAG = "SearchNewsFragment"
 
     override fun onCreateView(
@@ -146,7 +145,7 @@ class SearchNewsFragment: Fragment(R.layout.fragment_search_news) {
     }
 
     private fun setUpRecyclerView(){
-        newsAdapter = NewsAdpater()
+        newsAdapter = NewsAdapter()
         _binding?.rvSearchNews?.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)

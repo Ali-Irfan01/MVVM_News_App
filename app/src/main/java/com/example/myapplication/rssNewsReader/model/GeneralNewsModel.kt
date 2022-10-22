@@ -1,4 +1,4 @@
-package com.example.myapplication.rssReaderARY.model
+package com.example.myapplication.rssNewsReader.model
 
 data class GeneralNewsModel(
     val title: String?,

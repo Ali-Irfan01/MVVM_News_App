@@ -1,10 +1,10 @@
-package com.example.myapplication.rssReaderARY.parsers
+package com.example.myapplication.rssNewsReader.parsers
 
 import android.util.Xml
-import com.example.myapplication.rssReaderARY.model.GeneralNewsModel
-import com.example.myapplication.rssReaderARY.util.namespace
-import com.example.myapplication.rssReaderARY.util.readFromParser
-import com.example.myapplication.rssReaderARY.util.skip
+import com.example.myapplication.rssNewsReader.model.GeneralNewsModel
+import com.example.myapplication.rssNewsReader.util.namespace
+import com.example.myapplication.rssNewsReader.util.readFromParser
+import com.example.myapplication.rssNewsReader.util.skip
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserException
 import java.io.IOException
@@ -12,7 +12,7 @@ import java.io.InputStream
 
 private var indexCount = -1
 
-class SamaaXmlParser {
+class TribuneXmlParser {
     @Throws(XmlPullParserException::class, IOException::class)
     fun parse(inputStream: InputStream): List<GeneralNewsModel> {
         inputStream.use {
@@ -21,13 +21,13 @@ class SamaaXmlParser {
             parser.setInput(it, null)
             parser.nextTag()
             parser.nextToken()
-            parser.next()
+            //parser.next()
             return readFeed(parser)
         }
     }
 
     @Throws(XmlPullParserException::class, IOException::class)
-    private fun readFeed(parser: XmlPullParser): List<GeneralNewsModel> {
+     fun readFeed(parser: XmlPullParser): List<GeneralNewsModel> {
         val newsList = mutableListOf<GeneralNewsModel>()
 
         parser.require(XmlPullParser.START_TAG, namespace, "channel")
@@ -40,9 +40,13 @@ class SamaaXmlParser {
                 indexCount++
             } else if (parser.name == "pubDate" && newsList.size != 0) {
                 newsList[indexCount].pubDate = readFromParser(parser, "pubDate")
-            } else if (parser.name == "media:content" && newsList.size != 0) {
+            } else if (parser.name == "description" && newsList.size != 0) {
+                newsList[indexCount].description = readFromParser(parser, "description")
+            } else if (parser.name == "content:encoded" && newsList.size != 0) {
+                newsList[indexCount].content = readFromParser(parser, "content:encoded")
+            } else if (parser.name == "image" && newsList.size != 0) {
                 parser.nextTag()
-                newsList[indexCount].imgUrl = parser.getAttributeValue(null, "url")
+                newsList[indexCount].imgUrl = parser.getAttributeValue(namespace, "src")
             } else {
                 skip(parser)
             }
@@ -56,8 +60,6 @@ class SamaaXmlParser {
         parser.require(XmlPullParser.START_TAG, namespace, "item")
         var title: String? = null
         var link: String? = null
-        var description: String? = null
-        var content: String? = null
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.eventType != XmlPullParser.START_TAG) {
@@ -66,15 +68,13 @@ class SamaaXmlParser {
             when (parser.name) {
                 "title" -> title = readFromParser(parser, "title")
                 "link" -> link = readFromParser(parser, "link")
-                "description" -> description = readFromParser(parser, "description")
-                "content:encoded" -> content = readFromParser(parser, "content:encoded")
             }
         }
         return GeneralNewsModel(
             title = title,
             link = link,
-            description = description,
-            content = content,
+            description = "description",
+            content = "content",
             imgUrl = "imgUrl",
             pubDate = "pubDate"
         )

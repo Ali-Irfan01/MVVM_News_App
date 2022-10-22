@@ -58,5 +58,4 @@ class NotificationMainActivity : AppCompatActivity() {
             manager.createNotificationChannel(channel)
         }
     }
-
 }

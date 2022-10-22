@@ -108,7 +108,18 @@
     <string name="street_number_room">Street Number</string>
     <string name="search">Search...</string>
     <string name="google_maps_key">AIzaSyDiRn10IXb59_wT0KbBf-YC6DYSHfqF04I</string>
-<!--    <string name="app_name">RunningApp</string>-->
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="enter_e_mail">Enter E-mail...</string>
+    <string name="enter_password">Enter Password...</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="enter_username_here">Enter Username here ...</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="clear">Clear</string>
+    <string name="signup_text">Don\'t have an account? Click <i><u>here</u></i> to signup</string>
+    <!--    <string name="app_name">RunningApp</string>-->
     <string-array name="filter_options">
         <item>Date</item>
         <item>Running Time</item>
@@ -116,4 +127,9 @@
         <item>Average Speed</item>
         <item>Calories Burned</item>
     </string-array>
+    <string name="webclient_id">169829971565-7bd3snqmkl0oqo0qbm5qb425glq1n6qa.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">762560488164928</string>
+    <string name="facebook_client_token">34d9a72d523c50cfd7bd37f34bb17de7</string>
+    <string name="fb_login_protocol_scheme">fb762560488164928</string>
+    <string name="fetch_feed">Fetch Feed</string>
 </resources>

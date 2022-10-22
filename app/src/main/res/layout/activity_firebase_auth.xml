@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".firebaseAuth.FirebaseAuth">
+        <TextView
+            android:id="@+id/txtRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/register"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="@string/login"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtRegisterEmail"
+            android:layout_width="349dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_e_mail"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/edtRegisterPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRegister"
+            app:layout_constraintVertical_bias="0.037"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/edtRegisterPassword"
+            android:layout_width="349dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="96dp"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRegister"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/e_mail"
+            app:layout_constraintBottom_toTopOf="@+id/edtRegisterEmail"
+            app:layout_constraintEnd_toStartOf="@+id/txtRegister"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtRegisterEmail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/e_mail"
+            app:layout_constraintBottom_toTopOf="@+id/edtEmailLogin"
+            app:layout_constraintEnd_toStartOf="@+id/txtLogin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtEmailLogin"
+            app:layout_constraintTop_toBottomOf="@+id/txtLogin"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/password"
+            app:layout_constraintEnd_toEndOf="@+id/edtRegisterPassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtRegisterPassword"
+            app:layout_constraintTop_toBottomOf="@+id/edtRegisterEmail" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:importantForAutofill="auto"
+            app:layout_constraintBottom_toTopOf="@+id/edtPasswordLogin"
+            app:layout_constraintEnd_toEndOf="@+id/edtPasswordLogin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtPasswordLogin"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmailLogin"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="@+id/edtRegisterPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edtRegisterPassword"
+            app:layout_constraintTop_toBottomOf="@+id/edtRegisterPassword" />
+
+        <EditText
+            android:id="@+id/edtEmailLogin"
+            android:layout_width="349dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/enter_e_mail"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLogin"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/edtPasswordLogin"
+            android:layout_width="349dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="96dp"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLogin"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="@+id/edtPasswordLogin"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edtPasswordLogin"
+            app:layout_constraintTop_toBottomOf="@+id/edtPasswordLogin" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture" />
+
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/sign_out"
+            app:layout_constraintEnd_toEndOf="@+id/edtPasswordLogin"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/edtPasswordLogin"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <ImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSignOut"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignOut"
+            app:srcCompat="@drawable/person_add_alt"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/edtUpdateUsername"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:hint="@string/enter_username_here"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignOut"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/btnUpdateUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/update_profile"
+            app:layout_constraintEnd_toEndOf="@+id/edtUpdateUsername"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/edtUpdateUsername" />
+
+        <Button
+            android:id="@+id/btnClearImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpdateUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/edtUpdateUsername"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

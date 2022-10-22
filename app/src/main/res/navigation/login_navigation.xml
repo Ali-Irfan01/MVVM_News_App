@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/emailFragment2">
+    <fragment
+        android:id="@+id/emailFragment2"
+        android:name="com.example.myapplication.loginWithMultipleOptions.fragments.OptionsFragment"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_emailFragment2_to_emailFragment"
+            app:destination="@id/emailFragment" />
+        <action
+            android:id="@+id/action_emailFragment2_to_googleFragment"
+            app:destination="@id/googleFragment" />
+        <action
+            android:id="@+id/action_emailFragment2_to_appleFragment"
+            app:destination="@id/appleFragment" />
+        <action
+            android:id="@+id/action_emailFragment2_to_facebookFragment"
+            app:destination="@id/facebookFragment" />
+        <action
+            android:id="@+id/action_emailFragment2_self"
+            app:destination="@id/emailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.example.myapplication.loginWithMultipleOptions.fragments.EmailFragment"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_email" >
+        <action
+            android:id="@+id/action_emailFragment_to_signupFragmentEmail"
+            app:destination="@id/signupFragmentEmail" />
+    </fragment>
+    <fragment
+        android:id="@+id/googleFragment"
+        android:name="com.example.myapplication.loginWithMultipleOptions.fragments.GoogleFragment"
+        android:label="fragment_google"
+        tools:layout="@layout/fragment_google" />
+    <fragment
+        android:id="@+id/facebookFragment"
+        android:name="com.example.myapplication.loginWithMultipleOptions.fragments.FacebookFragment"
+        android:label="fragment_facebook"
+        tools:layout="@layout/fragment_facebook" />
+    <fragment
+        android:id="@+id/appleFragment"
+        android:name="com.example.myapplication.loginWithMultipleOptions.fragments.AppleFragment"
+        android:label="fragment_apple"
+        tools:layout="@layout/fragment_apple" />
+    <fragment
+        android:id="@+id/signupFragmentEmail"
+        android:name="com.example.myapplication.loginWithMultipleOptions.fragments.SignupFragmentEmail"
+        android:label="fragment_signup_email"
+        tools:layout="@layout/fragment_signup_email" />
+</navigation>

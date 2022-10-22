@@ -36,7 +36,7 @@ class AlertDialogMainActivity : AppCompatActivity() {
         val options = arrayOf("First Item", "Second Item", "Third Item")
         val singleChoiceDialog = AlertDialog.Builder(this)
             .setTitle("Choose one of these options")
-            .setSingleChoiceItems(options, 0)   {dialogInterface, i ->
+            .setSingleChoiceItems(options, 0)   { _, i ->
                 Toast.makeText(this, "You Clicked on ${options[i]}", Toast.LENGTH_SHORT).show()
             }
             .setPositiveButton("Accept"){ _, _ ->

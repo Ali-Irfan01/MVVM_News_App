@@ -151,5 +151,4 @@ class NewsViewModel(
 //        }
 //        return false
 //    }
-
 }

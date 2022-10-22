@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".loginWithMultipleOptions.fragments.SignupFragmentEmail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtSignupEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:background="@color/white"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtSignupEmailNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Please Enter your Email here ..."
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/txtSignupEmail"
+        app:layout_constraintStart_toStartOf="@+id/txtSignupEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtSignupEmail" />
+
+    <EditText
+        android:id="@+id/edtPasswordSignupNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Enter your Password here ..."
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignupEmailNew"
+        tools:layout_editor_absoluteX="71dp" />
+
+    <TextView
+        android:id="@+id/txtSmallEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/edtSignupEmailNew"
+        app:layout_constraintEnd_toEndOf="@+id/edtSignupEmailNew"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtSignupEmailNew"
+        app:layout_constraintTop_toBottomOf="@+id/txtSignupEmail"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtSmallPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        app:layout_constraintBottom_toTopOf="@+id/edtPasswordSignupNew"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordSignupNew"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordSignupNew"
+        app:layout_constraintTop_toBottomOf="@+id/edtSignupEmailNew"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnSignupNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Signup"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordSignupNew"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordSignupNew"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordSignupNew" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

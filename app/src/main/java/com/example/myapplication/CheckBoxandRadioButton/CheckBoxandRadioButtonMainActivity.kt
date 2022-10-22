@@ -31,7 +31,7 @@ class CheckBoxandRadioButtonMainActivity : AppCompatActivity() {
 
             Toast(this).apply {
                 duration = Toast.LENGTH_SHORT
-                view = layoutInflater.inflate(R.layout.custom_toast, findViewById(R.id.custom_toast_id))
+                layoutInflater.inflate(R.layout.custom_toast, findViewById(R.id.custom_toast_id))
                 //setGravity(Gravity.CENTER_VERTICAL,0,0)
                 show()
 

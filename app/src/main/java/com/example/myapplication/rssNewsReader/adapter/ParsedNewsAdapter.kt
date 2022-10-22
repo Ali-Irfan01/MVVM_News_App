@@ -1,4 +1,4 @@
-package com.example.myapplication.rssReaderARY.adapter
+package com.example.myapplication.rssNewsReader.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.R
-import com.example.myapplication.rssReaderARY.model.GeneralNewsModel
+import com.example.myapplication.rssNewsReader.model.GeneralNewsModel
 
 class ParsedNewsAdapter(
     private var newsList: List<GeneralNewsModel>
@@ -32,10 +32,11 @@ class ParsedNewsAdapter(
             findViewById<TextView>(R.id.txtNewsTitle).text = newsHolder.title
             findViewById<TextView>(R.id.txtNewsLink).text = newsHolder.link
             findViewById<TextView>(R.id.txtPubDate).text = newsHolder.pubDate
-            Glide.with(this.context)
-                .load(newsHolder.imgUrl)
-                .centerCrop()
-                .into(findViewById(R.id.ivNews))
+            if (newsHolder.imgUrl != "imgUrl")
+                Glide.with(this.context)
+                    .load(newsHolder.imgUrl)
+                    .centerCrop()
+                    .into(findViewById(R.id.ivNews))
             setOnClickListener {
                 onItemClickListener?.let { it(newsHolder) }
             }
